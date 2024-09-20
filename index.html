@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+        
+        <h2>Log Workout</h2>
+        <form id="workout-form">
+            <input type="date" id="workout-date" required>
+            <select id="workout-type" required>
+                <option value="">Select workout type</option>
+                <option value="Running">Running</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Swimming">Swimming</option>
+                <option value="Weight Training">Weight Training</option>
+            </select>
+            <input type="number" id="workout-duration" placeholder="Duration (minutes)" required>
+            <input type="number" id="workout-calories" placeholder="Calories burned" required>
+            <button type="submit">Log Workout</button>
+        </form>
+
+        <h2>Set Goal</h2>
+        <form id="goal-form">
+            <input type="number" id="weekly-goal" placeholder="Weekly goal (minutes)" required>
+            <button type="submit">Set Goal</button>
+        </form>
+
+        <h2>Recent Workouts</h2>
+        <div id="workout-list"></div>
+
+        <h2>Progress Chart</h2>
+        <canvas id="progress-chart"></canvas>
+    </div>
+
+    <script src = "script.js">
+        
+    </script>
+</body>
+</html>
